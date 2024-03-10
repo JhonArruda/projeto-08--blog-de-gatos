@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}    
+
+:root {
+    font-size: 62.5%;
+}    
+
+body {
+    width: min(180rem, 100%);
+    
+    
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "main main sidebar"
+    "footer footer footer";
+}
+
+header {
+    grid-area: header;
+}
+  
+.sidebar {
+    grid-area: sidebar;
+}
+  
+main {
+    grid-area: main;
+}
+  
+footer {
+   grid-area: footer;
+}
+
+@media (max-width: 500px) {
+    body {
+      grid-template-areas:
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+      grid-template-rows: auto 1fr auto auto;
+      grid-template-columns: 1fr;
+    }
+}
+
+body main input .description{    
+    font-family: "Mulish", sans-serif;
+}    
+
+
+header {
+   min-width: 33.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7.2rem;
+
+    padding: 1.8rem 11.2rem ;
+
+    font-weight: 700;
+
+    background-color: #065E7C;
+}  
+
+header form {
+    flex: 1;
+}
+
+header .avatar {
+    width: 5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+
+    object-fit: cover;
+    
+}    
+
+.input-wrapper label { 
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    
+}    
+
+.input-wrapper input {
+    width: 100%;
+    border: none;
+    
+    border-radius: .8rem;
+    
+    padding: 1.2rem 1.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    
+    
+    opacity: 0.2;
+}    
+
+
+.avatar {
+    width: 4.2rem;
+    height: 4.2rem;
+    
+    object-fit: cover; 
+    
+    border-radius: 50%;
+}    
+
+.artigo {
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    padding: 3rem 3rem 3rem 11.2rem;
+
+}
+
+
+.sidebar {
+    padding: 3rem 3rem 3rem 11.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.4rem;
+
+}
+
+.sidebar h1 {
+    padding-bottom: 3.2rem;
+
+}
+
+footer {
+    margin: 0;
+    padding-top: 1.8rem;
+
+    display: flex;
+    justify-content: center;
+    background-color: #065E7C;
+}
